@@ -1,9 +1,48 @@
 import java.util.Scanner;
 
 class Calculator {
+
+    static  double addition(double operand1, double operand2){
+        return  operand1 + operand2;
+    }
+
+    static  double subtraction(double operand1, double operand2){
+        return operand1 - operand2;
+    }
+
+    static  double multiplication(double operand1, double operand2){
+        return operand1 * operand2;
+    }
+
+    static  double division(double operand1, double operand2){
+        return operand1 / operand2;
+    }
+
+public static double calculator(double operand1,double operand2, char operator){
+           double result = 0;
+            switch (operator) {
+                case '+':
+                    result = addition(operand1, operand2);
+                    break;
+                case '-':
+                    result = subtraction(operand1, operand2);
+                    break;
+                case '*':
+                    result = multiplication(operand1, operand2);
+                    break;
+                case '/':
+                    result = division(operand1, operand2);
+                    break;
+                default:
+                    System.out.println("Введено не корректне значення");
+                    break;
+            }
+            return  result;
+        }
+
     public static void main(String[] args){
         char operator;
-        Double operand1, operand2, result;
+        Double operand1, operand2;
         Scanner input = new Scanner(System.in);
 
         System.out.println("Введіть перше число");
@@ -15,28 +54,6 @@ class Calculator {
         System.out.println("Введіть друге число");
         operand2 = input.nextDouble();
 
-        switch (operator) {
-            case '+':
-                result = operand1 + operand2;
-                System.out.println(operand1 + " + " + operand2 + " = " + result);
-                break;
-            case '-':
-                result = operand1 - operand2;
-                System.out.println(operand1 + " - " + operand2 + " = " + result);
-                break;
-            case '*':
-                result = operand1 * operand2;
-                System.out.println(operand1 + " * " + operand2 + " + " + result);
-                break;
-            case '/':
-                result = operand1 / operand2;
-                System.out.println(operand1 + " / " + operand2 + " = " + result);
-                break;
-            default:
-                System.out.println("Введено не корректне значення");
-                break;
-        }
-input.close();
-
+        System.out.println(operand1 + " " + operator + " " + operand2 + " = " + calculator(operand1, operand2, operator));
     }
 }
