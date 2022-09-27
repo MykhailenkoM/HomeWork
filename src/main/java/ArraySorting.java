@@ -49,15 +49,12 @@ public class ArraySorting {
         int result = 0;
         switch (type) {
             case "Bubble":
-                result = bubbleSort(array);
-                break;
+                return bubbleSort(array);
             case "Selection":
-                result = selectionSort(array);
-                break;
+                return selectionSort(array);
             default:
-                System.out.println("Помилка");
+                throw new IllegalArgumentException("Помилка");
         }
-        return result;
     }
 
     public static void main(String[] args) {
