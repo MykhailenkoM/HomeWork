@@ -1,4 +1,4 @@
-package Rectangle;
+package rectangle;
 
 public class Rectangle {
     double side1;

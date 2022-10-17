@@ -1,4 +1,4 @@
-package MyArea;
+package myArea;
 
 import java.util.Scanner;
 

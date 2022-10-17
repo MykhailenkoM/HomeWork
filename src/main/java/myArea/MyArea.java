@@ -1,4 +1,4 @@
-package MyArea;
+package myArea;
 
 public class MyArea {
     static final double Pi = 3.14;

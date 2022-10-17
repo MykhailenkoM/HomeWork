@@ -1,6 +1,4 @@
-package Rectangle;
-
-import MyArea.MyArea;
+package rectangle;
 
 import java.util.Scanner;
 
